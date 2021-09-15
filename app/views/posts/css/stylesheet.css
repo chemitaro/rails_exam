@@ -1,3 +1,10 @@
+header {
+  background-color: red;
+}
+header h1{
+  font-size: 50px;
+}
+
 .tweet{
   display: block;
   border: solid 1px black;
