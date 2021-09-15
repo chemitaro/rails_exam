@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<link rel="stylesheet" href="./css/stylesheet.css">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href=".../assets/stylesheets/posts.scss">
     <title>ツイートアプリ</title>
   </head>
   <body>
@@ -11,22 +11,28 @@
         <h1>ツイートアプリ</h1>
       </header>
       <div class="tsubuyaki">
-        <p><%= link_to 'つぶやく', new_post_path %></p>
+        <p class = "button"><%= link_to 'つぶやく', new_post_path %></p>
         <p><%= notice %></p>
-
       </div>
-      <article class="main_content">
+      <article>
         <% @posts.each do |post| %>
-          <div class="tweet">
-            <p><%= post.content %></p>
-            <div class="action_button">
-              <p><%= link_to '詳細', post_path(post.id) %></p>
-              <p><%= link_to '編集', edit_post_path(post.id) %></p>
-              <p><%= link_to '削除', post_path(post.id), method: :delete %></p>
-            </div>
-          </div>
+          <tr>
+            <td class = "tweet">
+              <br>
+              <p class = "tweet"><%= post.content %></p>
+              <ul class="action_button">
+                <li class="button"><%= link_to '詳細', post_path(post.id) %></li>
+                <li class="button"><%= link_to '編集', edit_post_path(post.id) %></li>
+                <li class="button"><%= link_to '削除', post_path(post.id), method: :delete %></li>
+              </ul>
+            </td>
+            <br>
+          </tr>
         <% end %>
       </article>
+      <footer>
+        <p>株式会社○✕建設</p>
+      </footer>
     </div>
   </body>
 </html>
