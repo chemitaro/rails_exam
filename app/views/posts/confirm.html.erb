@@ -3,5 +3,5 @@
   <%= form.hidden_field :content %>
   <p>内容：<%= @post.content %></p>
   <%= form.submit "つぶやく" %>
-  <%= link_to '戻る', new_post_path %>
+  <%= form.submit "戻る", name: 'back',id: [:id] %>
 <% end %>

@@ -1,4 +1,4 @@
-<h1>つぶやく</h1>
+<h1>新しくつぶやく</h1>
 <%= form_with(model: @post, local: true, url: confirm_posts_path) do |form| %>
   <% if @post.errors.any? %>
     <p>1~140文字でつぶやいてください。</p>
