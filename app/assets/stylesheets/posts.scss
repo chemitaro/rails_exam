@@ -4,7 +4,6 @@ html{
 body{
   height: 100%
 }
-
 header{
   background-color: lightblue;
   width: 100%;
@@ -12,13 +11,11 @@ header{
 h1{
   margin:0px;
 }
-
 .clearfix:after{
   content: "";
   display: block;
   clear: both;
 }
-
 .action_button li {
   float: left;
   list-style:none;
