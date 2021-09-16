@@ -1,12 +1,34 @@
-<h1>新しくつぶやく</h1>
-<%= form_with(model: @post, local: true, url: choose_new_or_edit) do |form| %>
-  <% if @post.errors.any? %>
-    <p>1~140文字でつぶやいてください。</p>
-  <% end %>
-  <div class="post_content">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
-  </div>
-  <%= form.submit %>
-<% end %>
-<%= link_to 'home画面へ', posts_path %>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href=".../assets/stylesheets/posts.scss">
+    <title>ツイートアプリ</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>ツイートアプリ</h1>
+      </header>
+      <article class="clearfix">
+        <h1>新しくつぶやく</h1>
+        <%= form_with(model: @post, local: true, url: choose_new_or_edit) do |form| %>
+          <% if @post.errors.any? %>
+            <p>1~140文字でつぶやいてください。</p>
+          <% end %>
+          <div class="post_content">
+            <%= form.label :content %>
+            <%= form.text_field :content %>
+          </div>
+          <%= form.submit %>
+        <% end %>
+        <%= link_to 'home画面へ', posts_path %>
+        <div class="spacer">
+        </div>
+      </article>
+      <footer class="footer">
+        <p>株式会社○✕建設</p>
+      </footer>
+    </div>
+  </body>
+</html>

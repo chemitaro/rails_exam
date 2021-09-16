@@ -1,6 +1,24 @@
+html{
+  height: 100%
+}
+body{
+  height: 100%
+}
+
 header{
   background-color: lightblue;
+  width: 100%;
 }
+h1{
+  margin:0px;
+}
+
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .action_button li {
   float: left;
   list-style:none;
@@ -20,7 +38,22 @@ header{
   font-size: 10px;
   background-color: lightblue;
 }
-footer{
+.container{
+  width: 980px;
+  margin: 0 auto;
+  min-height: 100%;
+  position: relative;
+}
+.spacer{
+  height: 80px;
+  display: block;
+}
+.footer{
   text-align: center;
-  background-color: lightblue
+  background-color: lightblue;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display:table;
 }

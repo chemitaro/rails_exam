@@ -1,7 +1,29 @@
-<h3>以下の内容をつぶやく</h3>
-<%= form_with(model: @post, local: true, url: posts_path) do |form| %>
-  <%= form.hidden_field :content %>
-  <p>内容：<%= @post.content %></p>
-  <%= form.submit "つぶやく" %>
-  <%= form.submit "戻る", name: 'back' %>
-<% end %>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href=".../assets/stylesheets/posts.scss">
+    <title>ツイートアプリ</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>ツイートアプリ</h1>
+      </header>
+      <article class="clearfix">
+        <h3>以下の内容をつぶやく</h3>
+        <%= form_with(model: @post, local: true, url: posts_path) do |form| %>
+          <%= form.hidden_field :content %>
+          <p>内容：<%= @post.content %></p>
+          <%= form.submit "つぶやく" %>
+          <%= form.submit "戻る", name: 'back' %>
+        <% end %>
+        <div class="spacer">
+        </div>
+      </article>
+      <footer class="footer">
+        <p>株式会社○✕建設</p>
+      </footer>
+    </div>
+  </body>
+</html>

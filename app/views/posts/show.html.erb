@@ -2,11 +2,24 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>詳細</title>
+    <link rel="stylesheet" href=".../assets/stylesheets/posts.scss">
+    <title>ツイートアプリ</title>
   </head>
   <body>
-    <h1>つぶやき詳細</h1>
-    <p><%= @post.content %></p>
-    <%= link_to 'home画面へ', posts_path %>
+    <div class="container">
+      <header>
+        <h1>ツイートアプリ</h1>
+      </header>
+      <article class="clearfix">
+        <h1>つぶやき詳細</h1>
+        <p><%= @post.content %></p>
+        <%= link_to 'home画面へ', posts_path %>
+        <div class="spacer">
+        </div>
+      </article>
+      <footer class="footer">
+        <p>株式会社○✕建設</p>
+      </footer>
+    </div>
   </body>
 </html>
