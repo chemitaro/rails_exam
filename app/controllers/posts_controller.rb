@@ -6,9 +6,8 @@ class PostsController < ApplicationController
     @post = Post.new
   end
   def create
-    @post = Post.create(post_params)
+    @post = Post.new(post_params)
     if params[:back]
-
       render :new
     else
       if @post.save
